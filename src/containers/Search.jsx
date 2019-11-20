@@ -24,21 +24,17 @@ const Search = ({
   const [gridLayout, setgridLayout] = useState(true);
 
   useEffect(() => {
-    if (requestWasSaved) {
+    if (requestWasSaved && popupIsOpen) {
       setTimeout(() => {
         closePopup();
       }, 4000);
     }
-  });
+  }, [requestWasSaved]);
 
   useEffect(() => {
-    if (requestWasSaved) {
+    if (requests.length !== 0) {
       localStorage.setItem(login, JSON.stringify(requests));
-    }
-  }, [login, requestWasSaved, requests]);
-
-  useEffect(() => {
-    if (login) {
+    } else {
       const array = JSON.parse(localStorage.getItem(login));
       if (array) {
         addSavedRequests(array);

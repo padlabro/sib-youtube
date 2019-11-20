@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import logo from '../../../public/images/logo.svg';
 
-const HeaderComp = ({ exitFromAccount }) => {
+const HeaderComp = ({ exitFromAccount, closePopup }) => {
   return (
     <header className="header">
       <div className="container">
@@ -16,7 +16,13 @@ const HeaderComp = ({ exitFromAccount }) => {
             <NavLink className="nav__link" exact activeClassName="active" to="/">
               Поиск
             </NavLink>
-            <NavLink className="nav__link" exact activeClassName="active" to="/favorites">
+            <NavLink
+              className="nav__link"
+              onClick={closePopup}
+              exact
+              activeClassName="active"
+              to="/favorites"
+            >
               Избранное
             </NavLink>
           </nav>
@@ -31,5 +37,6 @@ const HeaderComp = ({ exitFromAccount }) => {
 export default HeaderComp;
 
 HeaderComp.propTypes = {
-  exitFromAccount: PropTypes.func.isRequired
+  exitFromAccount: PropTypes.func.isRequired,
+  closePopup: PropTypes.func.isRequired
 };

@@ -23,11 +23,6 @@ const Favorites = ({
       }
     }
   }, [addSavedRequests, login, requests]);
-  useEffect(() => {
-    if (requests.length !== 0) {
-      localStorage.setItem(login, JSON.stringify(requests));
-    }
-  }, [login, requests]);
   const handleExecRequest = e => {
     const { searchQuery, sortBy, numOfVideos } = requests[e.target.name];
     onSearchVideos(searchQuery);
