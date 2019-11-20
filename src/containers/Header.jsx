@@ -7,8 +7,8 @@ import { headerActions } from '../actions';
 
 const Header = ({ history, userLogout }) => {
   const exitFromAccount = () => {
-    userLogout();
     localStorage.removeItem('token');
+    userLogout();
     history.push('/login');
   };
 

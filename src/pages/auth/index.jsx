@@ -6,11 +6,11 @@ import { Login } from '../../components';
 import usersBase from '../../usersBase.json';
 import { authActions } from '../../actions';
 
-const Auth = ({ isAuth, history, userLogin }) => {
+const Auth = ({ history, userLogin }) => {
   const [userData, setUserData] = useState({});
   const [error, setError] = useState('');
   useEffect(() => {
-    if (isAuth) {
+    if (localStorage.getItem('token')) {
       history.push('/');
     }
   });
@@ -48,14 +48,11 @@ const Auth = ({ isAuth, history, userLogin }) => {
 };
 export default withRouter(
   connect(
-    ({ auth }) => ({
-      isAuth: auth.isAuth
-    }),
+    null,
     authActions
   )(Auth)
 );
 Auth.propTypes = {
-  isAuth: PropTypes.bool.isRequired,
   history: PropTypes.object.isRequired,
   userLogin: PropTypes.func.isRequired
 };
