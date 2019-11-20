@@ -1,0 +1,23 @@
+@import 'reset-css';
+
+#root {
+  background-color: #fafafa;
+  position: relative;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  max-width: 1070px;
+  padding: 0 15px;
+  margin: 0 auto;
+}

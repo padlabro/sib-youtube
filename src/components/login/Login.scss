@@ -1,0 +1,40 @@
+.login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  margin: 0 auto;
+  width: 510px;
+  height: 520px;
+  padding: 40px 88px;
+  background-color: #fff;
+
+  &__logo {
+    display: block;
+    width: 88px;
+    height: 88px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  &__button {
+    width: 176px;
+    margin: 0 auto;
+    margin-top: 30px;
+
+    button {
+      width: 100%;
+    }
+  }
+}

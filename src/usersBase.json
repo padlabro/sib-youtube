@@ -1,0 +1,14 @@
+[
+  {
+    "login": "admin",
+    "password": "admin"
+  },
+  {
+    "login": "padlabro",
+    "password": "123456"
+  },
+  {
+    "login": "sibdev",
+    "password": "development"
+  }
+]
