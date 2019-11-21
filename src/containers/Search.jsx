@@ -42,6 +42,10 @@ const Search = ({
     }
   }, [login]);
 
+  useEffect(() => {
+    localStorage.setItem(login, JSON.stringify(requests));
+  }, [requests]);
+
   const onSearch = value => {
     if (value) {
       setVideoId(undefined);
