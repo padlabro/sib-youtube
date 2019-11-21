@@ -22,7 +22,11 @@ const Favorites = ({
         addSavedRequests(array);
       }
     }
-  }, [addSavedRequests, login, requests]);
+  }, [login]);
+  useEffect(() => {
+    localStorage.setItem(login, JSON.stringify(requests));
+  }, [requests]);
+
   const handleExecRequest = e => {
     const { searchQuery, sortBy, numOfVideos } = requests[e.target.name];
     onSearchVideos(searchQuery);

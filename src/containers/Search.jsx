@@ -32,6 +32,7 @@ const Search = ({
   }, [requestWasSaved]);
 
   useEffect(() => {
+    console.log('search', requests.length);
     if (requests.length !== 0) {
       localStorage.setItem(login, JSON.stringify(requests));
     } else {
