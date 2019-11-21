@@ -8,9 +8,9 @@ const Login = props => {
   const { userData, error, handleChange, handleSubmit } = props;
   return (
     <div className="login">
-      <Form className="form" onSubmit={handleSubmit} validateStatus={error}>
-        <img className="form__logo" src={logo} />
-        <p className="form__title">Вход</p>
+      <Form className="login-form" onSubmit={handleSubmit} validateStatus={error}>
+        <img className="login-form__logo" src={logo} />
+        <p className="login-form__title">Вход</p>
         <Form.Item hasFeedback label="Логин" colon={false}>
           <Input
             size="large"
@@ -37,7 +37,7 @@ const Login = props => {
             onChange={handleChange}
           />
         </Form.Item>
-        <Form.Item className="form__button">
+        <Form.Item className="login-form__button">
           <Button type="primary" size="large" htmlType="submit">
             Войти
           </Button>

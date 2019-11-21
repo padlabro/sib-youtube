@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { Auth, Home } from './pages';
 import './styles.scss';
+import './media.scss';
 
 const App = () => {
   return (

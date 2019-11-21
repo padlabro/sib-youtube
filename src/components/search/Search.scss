@@ -4,7 +4,7 @@
 .search-input {
   display: block;
   margin: 0 auto;
-  width: 686px;
+  max-width: 686px;
   padding-top: 220px;
 
   &__body {
@@ -42,13 +42,16 @@
 }
 
 .search-active {
-  width: auto;
+  max-width: none;
   padding-top: 40px;
 
   .search-input__title {
     text-align: left;
     font-size: 28px;
     margin-bottom: 12px;
+  }
+  .ant-input-lg {
+    padding-right: 50px !important;
   }
 }
 

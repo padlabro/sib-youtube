@@ -15,19 +15,26 @@
   }
 
   .request {
+    position: relative;
     height: 47px;
     background-color: #fff;
     display: flex;
-    padding: 0 20px;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #f1f1f1;
+    overflow: hidden;
+    padding: 0 20px;
 
-    &:hover {
+    &:hover,
+    &:active {
       background-color: #f1f1f1;
 
       .request-button {
+        pointer-events: all;
         display: inline-flex;
+      }
+      .request__buttons {
+        display: block;
       }
     }
 
@@ -39,10 +46,20 @@
       line-height: 20px;
       color: #000000;
     }
+    &__buttons {
+      height: 47px;
+      width: 100%;
+      background-color: #f1f1f1;
+      display: none;
+      position: absolute;
+      right: 0;
+    }
   }
 }
 
 .request-button {
+  pointer-events: none;
+  position: absolute;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -52,12 +69,23 @@
   margin-left: 30px;
   cursor: pointer;
   display: none;
+  &:hover {
+    color: yellowgreen;
+  }
 }
 .delete-button {
+  top: 0;
+  right: 20px;
   color: #ff0000;
 }
 
-.edit-button,
 .execute-button {
+  color: #1390e5;
+  top: 0;
+  right: 210px;
+}
+.edit-button {
+  top: 0;
+  right: 90px;
   color: #1390e5;
 }
