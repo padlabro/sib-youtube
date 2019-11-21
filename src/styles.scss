@@ -1,13 +1,14 @@
 @import 'reset-css';
-::-webkit-scrollbar {
-  width: 0;
-}
+
 #root {
   background-color: #fafafa;
   position: relative;
   &::-webkit-scrollbar {
     width: 0 !important;
   }
+}
+p {
+  margin-bottom: 0 !important;
 }
 
 button {

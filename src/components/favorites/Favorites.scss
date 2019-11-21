@@ -30,8 +30,8 @@
       background-color: #f1f1f1;
 
       .request-button {
-        pointer-events: all;
         display: inline-flex;
+        pointer-events: all;
       }
       .request__buttons {
         display: block;
@@ -65,7 +65,8 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
-  height: 47px;
+  padding-top: 4px;
+  height: 45px;
   margin-left: 30px;
   cursor: pointer;
   display: none;
