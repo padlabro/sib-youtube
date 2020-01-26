@@ -2,7 +2,7 @@ import React from 'react';
 import './Login.scss';
 import PropTypes from 'prop-types';
 import { Button, Form, Input } from 'antd';
-import logo from '../../../public/images/logo.svg';
+import logo from '../../../../../public/images/logo.svg';
 
 const Login = props => {
   const { userData, error, handleChange, handleSubmit } = props;

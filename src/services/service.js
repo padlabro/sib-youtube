@@ -22,7 +22,7 @@ const service = {
       .catch(() => store.dispatch(searchActions.requestDataError()));
   },
   getViews: res => {
-    const data = res;
+    const data = { ...res };
     Promise.all(
       data.items.map(u =>
         fetch(

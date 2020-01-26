@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Login } from '../../components';
+import Login from './component/login';
 import usersBase from '../../usersBase.json';
 import { authActions } from '../../actions';
 
