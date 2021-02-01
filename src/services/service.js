@@ -13,7 +13,7 @@ const service = {
       .get(
         `https://www.googleapis.com/youtube/v3/search?part=snippet&order=${order ||
           'relevance'}&q=${searchQuery}&type=video&maxResults=${maxResults ||
-          12}&key=AIzaSyALb8KB7Ko5KeWwPaDtEHndFOhACHuI_SU`
+          12}&key=AIzaSyCNKjebPGaR8HctYopSeck1jN9FqPDYzNk`
       )
       .then(item => {
         const res = item.data;
@@ -26,7 +26,7 @@ const service = {
     Promise.all(
       data.items.map(u =>
         fetch(
-          `https://www.googleapis.com/youtube/v3/videos?part=statistics&id=${u.id.videoId}&key=AIzaSyALb8KB7Ko5KeWwPaDtEHndFOhACHuI_SU`
+          `https://www.googleapis.com/youtube/v3/videos?part=statistics&id=${u.id.videoId}&key=AIzaSyCNKjebPGaR8HctYopSeck1jN9FqPDYzNk`
         )
       )
     )
